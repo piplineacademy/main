@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Home | Pipline Forex Academy</title>
+<meta name="description" content="Free forex education: lessons, candlestick patterns, technical analysis, risk management, psychology, an economic calendar, glossary and quizzes." />
+<meta property="og:title" content="Home | Pipline Forex Academy" />
+<meta property="og:description" content="Free forex education: lessons, candlestick patterns, technical analysis, risk management, psychology, an economic calendar, glossary and quizzes." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<div id="readbar"></div>
+
+<header class="site">
+  <div class="container">
+    <nav class="nav">
+      <a class="brand" href="index.html"><span class="dot">P</span> Pipline<span style="color:var(--brand)">Academy</span></a>
+      <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="learn-forex.html">Learn Forex</a>
+          <a href="candlestick-patterns.html">Candlestick Patterns</a>
+          <a href="technical-analysis.html">Technical Analysis</a>
+          <a href="risk-management.html">Risk Management</a>
+          <a href="trading-psychology.html">Trading Psychology</a>
+          <div class="nav-more">
+            <button type="button">More ▾</button>
+            <div class="dropdown">
+            <a href="economic-calendar.html">Economic Calendar</a>
+            <a href="glossary.html">Trading Glossary</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy Policy</a>
+            </div>
+          </div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <button class="icon-btn" data-theme-toggle type="button">☾</button>
+        <button class="icon-btn burger" id="burger" type="button" aria-label="Menu">☰</button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer">
+      <a href="index.html">Home</a>
+      <a href="learn-forex.html">Learn Forex</a>
+      <a href="candlestick-patterns.html">Candlestick Patterns</a>
+      <a href="technical-analysis.html">Technical Analysis</a>
+      <a href="risk-management.html">Risk Management</a>
+      <a href="trading-psychology.html">Trading Psychology</a>
+      <a href="economic-calendar.html">Economic Calendar</a>
+      <a href="glossary.html">Trading Glossary</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+</aside>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow reveal">● Free forex curriculum</span>
+    <h1 class="reveal">Learn to trade forex the <span style="background:linear-gradient(135deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent">boring, repeatable way</span></h1>
+    <p class="lead reveal">Thirteen structured modules that take you from what a pip is, through chart reading and position sizing, to the written plan and journal that keep you consistent.</p>
+    <div class="reveal" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
+      <a class="btn btn-primary" href="learn-forex.html">Start the course →</a>
+      <a class="btn btn-ghost" href="quiz.html">Test yourself</a>
+    </div>
+    <div class="grid g4 reveal" style="margin-top:48px">
+      <div class="stat"><b data-count="13">0</b><span>Modules</span></div>
+      <div class="stat"><b data-count="60" data-suffix="+">0</b><span>Lessons &amp; patterns</span></div>
+      <div class="stat"><b data-count="180" data-suffix="+">0</b><span>Glossary terms</span></div>
+      <div class="stat"><b data-count="0">0</b><span>Cost, forever</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="reveal">Your learning path</h2>
+    <p class="muted reveal" style="max-width:60ch">Work through it in order the first time. Everything is saved in your browser, so your progress and bookmarks are still here when you come back.</p>
+    <div class="card reveal" style="margin:22px 0 28px">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px">
+        <strong>Course progress</strong>
+        <span class="muted" data-progress-text>0 / 12 lessons (0%)</span>
+      </div>
+      <div class="bar" data-progress-bar style="margin-top:12px"><i></i></div>
+      <div class="muted" style="margin-top:10px;font-size:.85rem">★ <span data-saved-count>0</span> items saved for later</div>
+      <div data-progress-total="12" hidden></div>
+    </div>
+    <div class="grid g3">
+      <a class="card reveal" data-delay="0" href="learn-forex.html">
+        <div class="ico">01</div><h3>Learn Forex</h3><p>Pairs, pips, lots, spread, leverage and how an order actually reaches the market.</p></a>
+      <a class="card reveal" data-delay="1" href="candlestick-patterns.html">
+        <div class="ico">02</div><h3>Candlestick Patterns</h3><p>Read single candles and multi-candle formations — and know when they mean nothing.</p></a>
+      <a class="card reveal" data-delay="2" href="technical-analysis.html">
+        <div class="ico">03</div><h3>Technical Analysis</h3><p>Structure, support and resistance, trendlines, moving averages, RSI and MACD.</p></a>
+      <a class="card reveal" data-delay="0" href="risk-management.html">
+        <div class="ico">04</div><h3>Risk Management</h3><p>Position sizing maths, stop placement, R-multiples and drawdown survival.</p></a>
+      <a class="card reveal" data-delay="1" href="trading-psychology.html">
+        <div class="ico">05</div><h3>Trading Psychology</h3><p>Revenge trading, FOMO, tilt and the routines that neutralise them.</p></a>
+      <a class="card reveal" data-delay="2" href="economic-calendar.html">
+        <div class="ico">06</div><h3>Economic Calendar</h3><p>Which releases move price, how much, and how to trade around them.</p></a>
+      <a class="card reveal" data-delay="0" href="glossary.html">
+        <div class="ico">07</div><h3>Trading Glossary</h3><p>Every term you'll meet, defined in plain English and searchable.</p></a>
+      <a class="card reveal" data-delay="1" href="quiz.html">
+        <div class="ico">08</div><h3>Knowledge Quiz</h3><p>Twelve questions, instant scoring and explanations for every answer.</p></a>
+      <a class="card reveal" data-delay="2" href="blog.html">
+        <div class="ico">09</div><h3>Blog</h3><p>Short, practical articles on execution, journaling and market behaviour.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-2);border-block:1px solid var(--border)">
+  <div class="container">
+    <div class="grid g2" style="align-items:center;gap:40px">
+      <div class="reveal">
+        <h2 class="mt-0">Try the position size calculator</h2>
+        <p class="muted">The single most useful piece of maths in trading. Enter your account, the percentage you're willing to lose and your stop distance — get the lot size that makes those numbers true.</p>
+        <a class="btn btn-ghost" href="risk-management.html">Full risk module →</a>
+      </div>
+      <div class="card reveal">
+        <div class="grid g2" style="gap:12px">
+          <div class="field mb-0"><label>Account balance ($)</label><input id="h-bal" type="number" value="5000" /></div>
+          <div class="field mb-0"><label>Risk per trade (%)</label><input id="h-risk" type="number" value="1" step="0.1" /></div>
+          <div class="field mb-0"><label>Stop loss (pips)</label><input id="h-stop" type="number" value="25" /></div>
+          <div class="field mb-0"><label>Pip value / lot ($)</label><input id="h-pv" type="number" value="10" /></div>
+        </div>
+        <div style="margin-top:16px;padding:16px;border-radius:12px;background:var(--surface-2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+          <span class="muted">Risking <strong id="h-amt" style="color:var(--text)">$50.00</strong></span>
+          <span>Position size: <strong id="h-lots" style="color:var(--brand);font-size:1.15rem">0.20 lots</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="reveal center">Common beginner questions</h2>
+    <div data-accordion-group style="max-width:760px;margin:28px auto 0">
+      <div class="acc"><button type="button">How much money do I need to start?<span class="chev">▾</span></button><div class="body"><div>Enough that a 1% risk is a meaningful position but small enough that losing it changes nothing in your life. Most people start on a demo account for at least eight weeks, then fund a small live account. The skill you're buying with that money is emotional data, not returns.</div></div></div>
+      <div class="acc"><button type="button">How long before I'm profitable?<span class="chev">▾</span></button><div class="body"><div>There is no honest number, but the pattern is consistent: months of study, then a long stretch of small, controlled losses while your process stabilises. Anyone who gives you a fixed timeline is selling something.</div></div></div>
+      <div class="acc"><button type="button">Do I need indicators?<span class="chev">▾</span></button><div class="body"><div>No. Indicators summarise price you can already see. They are useful for consistency and for filtering, not for prediction. Learn to read raw price first, then add at most two tools.</div></div></div>
+      <div class="acc"><button type="button">What is the most common reason beginners lose?<span class="chev">▾</span></button><div class="body"><div>Position sizing. Not entries. A trader with mediocre entries and strict 0.5% risk survives long enough to improve; a trader with excellent entries and 10% risk does not survive one bad week.</div></div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="dot">P</span> PiplineAcademy</a>
+        <p class="muted" style="font-size:.9rem;max-width:36ch">Free, structured forex education — from your first pip to a written trading plan you can actually follow.</p>
+        <form data-newsletter style="display:flex;gap:8px;max-width:320px">
+          <input type="email" placeholder="Email for weekly lessons" aria-label="Email" />
+          <button class="btn btn-primary btn-sm" type="submit">Join</button>
+        </form>
+      </div>
+      <div><h4>Learn</h4><a href="learn-forex.html">Learn Forex</a><a href="candlestick-patterns.html">Candlestick Patterns</a><a href="technical-analysis.html">Technical Analysis</a><a href="risk-management.html">Risk Management</a></div>
+      <div><h4>Tools</h4><a href="economic-calendar.html">Economic Calendar</a><a href="glossary.html">Trading Glossary</a><a href="quiz.html">Quiz</a><a href="trading-psychology.html">Trading Psychology</a></div>
+      <div><h4>Company</h4><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year></span> Pipline Forex Academy. Educational content only — not financial advice.</span>
+      <span>Trading involves substantial risk of loss.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="totop" title="Back to top">↑</button>
+<div id="toasts"></div>
+<script src="assets/app.js"></script>
+<script>
+document.addEventListener("pfa:ready",function(){
+  var ids=["h-bal","h-risk","h-stop","h-pv"].map(function(i){return document.getElementById(i)});
+  function calc(){
+    var bal=+ids[0].value||0, risk=+ids[1].value||0, stop=+ids[2].value||0, pv=+ids[3].value||0;
+    var amt=bal*risk/100;
+    var lots=(stop>0&&pv>0)?amt/(stop*pv):0;
+    document.getElementById("h-amt").textContent="$"+amt.toFixed(2);
+    document.getElementById("h-lots").textContent=lots.toFixed(2)+" lots";
+  }
+  ids.forEach(function(i){i.addEventListener("input",calc)});calc();
+});
+</script>
+</body>
+</html>

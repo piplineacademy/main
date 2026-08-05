@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blog | Pipline Forex Academy</title>
+<meta name="description" content="Practical articles on execution, journaling, risk, market behaviour and building a repeatable trading process." />
+<meta property="og:title" content="Blog | Pipline Forex Academy" />
+<meta property="og:description" content="Practical articles on execution, journaling, risk, market behaviour and building a repeatable trading process." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<div id="readbar"></div>
+
+<header class="site">
+  <div class="container">
+    <nav class="nav">
+      <a class="brand" href="index.html"><span class="dot">P</span> Pipline<span style="color:var(--brand)">Academy</span></a>
+      <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="learn-forex.html">Learn Forex</a>
+          <a href="candlestick-patterns.html">Candlestick Patterns</a>
+          <a href="technical-analysis.html">Technical Analysis</a>
+          <a href="risk-management.html">Risk Management</a>
+          <a href="trading-psychology.html">Trading Psychology</a>
+          <div class="nav-more">
+            <button type="button">More ▾</button>
+            <div class="dropdown">
+            <a href="economic-calendar.html">Economic Calendar</a>
+            <a href="glossary.html">Trading Glossary</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy Policy</a>
+            </div>
+          </div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <button class="icon-btn" data-theme-toggle type="button">☾</button>
+        <button class="icon-btn burger" id="burger" type="button" aria-label="Menu">☰</button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer">
+      <a href="index.html">Home</a>
+      <a href="learn-forex.html">Learn Forex</a>
+      <a href="candlestick-patterns.html">Candlestick Patterns</a>
+      <a href="technical-analysis.html">Technical Analysis</a>
+      <a href="risk-management.html">Risk Management</a>
+      <a href="trading-psychology.html">Trading Psychology</a>
+      <a href="economic-calendar.html">Economic Calendar</a>
+      <a href="glossary.html">Trading Glossary</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+</aside>
+
+<main>
+<section class="page-head">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Home</a> / Blog</div>
+    <h1>Blog</h1>
+    <p class="muted" style="max-width:66ch">Short, practical writing on the parts of trading that don't fit neatly into a lesson.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="card" style="margin-bottom:22px">
+      <div class="grid g2" style="gap:16px;align-items:end">
+        <div class="field mb-0"><label>Search articles</label><input id="bl-q" placeholder="Search titles and content…" /></div>
+        <div><label>Category</label><div class="pill-row" id="bl-cats">
+          <button class="pill active" data-c="all">All</button><button class="pill" data-c="execution">Execution</button><button class="pill" data-c="process">Process</button><button class="pill" data-c="technical">Technical</button><button class="pill" data-c="risk">Risk</button><button class="pill" data-c="fundamentals">Fundamentals</button>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="grid g2" id="bl-grid">
+      <article class="card reveal" data-c="execution" data-delay="0">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag green">execution</span><span class="tag">6 min read</span></div>
+        <h3 style="font-size:1.15rem">Why your stop keeps getting hit before the move</h3>
+        <p class="excerpt">Stops cluster where everyone can see them: just beyond the obvious swing, on round numbers, at the session high. Liquidity gets taken there because th…</p>
+        <div class="full" style="display:none"><p style="color:var(--muted);font-size:.93rem">Stops cluster where everyone can see them: just beyond the obvious swing, on round numbers, at the session high. Liquidity gets taken there because that's where it sits. The fix isn't a wider stop — it's a stop placed beyond the noise, with the lot size reduced to keep the money risk identical. Measure the pair's average excursion beyond a swing before it turns, and place your stop past that distance.</p></div>
+        <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+          <button class="btn btn-sm btn-ghost" data-toggle-post>Read article</button>
+          <button class="pill" data-bookmark="post-0">☆ Save</button>
+        </div>
+      </article>
+      <article class="card reveal" data-c="process" data-delay="1">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag green">process</span><span class="tag">5 min read</span></div>
+        <h3 style="font-size:1.15rem">The journal entry that actually changes behaviour</h3>
+        <p class="excerpt">Most journals record what happened. Useful ones record what you expected and how you felt. Add two fields to every entry: your confidence out of five …</p>
+        <div class="full" style="display:none"><p style="color:var(--muted);font-size:.93rem">Most journals record what happened. Useful ones record what you expected and how you felt. Add two fields to every entry: your confidence out of five before entry, and one sentence about your emotional state. After fifty trades, sort by confidence. Almost everyone finds their high-confidence trades perform no better than their medium ones — which is a direct instruction to stop sizing up on conviction.</p></div>
+        <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+          <button class="btn btn-sm btn-ghost" data-toggle-post>Read article</button>
+          <button class="pill" data-bookmark="post-1">☆ Save</button>
+        </div>
+      </article>
+      <article class="card reveal" data-c="technical" data-delay="0">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag green">technical</span><span class="tag">7 min read</span></div>
+        <h3 style="font-size:1.15rem">Reading a range without getting chopped</h3>
+        <p class="excerpt">Ranges destroy trend traders because every breakout fails. The tell is a contracting range with declining volatility: that's compression before expans…</p>
+        <div class="full" style="display:none"><p style="color:var(--muted);font-size:.93rem">Ranges destroy trend traders because every breakout fails. The tell is a contracting range with declining volatility: that's compression before expansion. A range with fat, full-bodied candles hitting both boundaries is a range to fade at the edges. A range with shrinking candles is a range to trade the break of. Same shape, opposite plan.</p></div>
+        <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+          <button class="btn btn-sm btn-ghost" data-toggle-post>Read article</button>
+          <button class="pill" data-bookmark="post-2">☆ Save</button>
+        </div>
+      </article>
+      <article class="card reveal" data-c="risk" data-delay="1">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag green">risk</span><span class="tag">4 min read</span></div>
+        <h3 style="font-size:1.15rem">What one percent risk actually feels like</h3>
+        <p class="excerpt">On a $2,000 account, one percent is twenty dollars — an amount that feels too small to bother with, which is exactly why beginners abandon it. But the…</p>
+        <div class="full" style="display:none"><p style="color:var(--muted);font-size:.93rem">On a $2,000 account, one percent is twenty dollars — an amount that feels too small to bother with, which is exactly why beginners abandon it. But the rule isn't about the dollar figure; it's about the number of consecutive losses you can absorb. At 1%, ten losses in a row costs under 10% of the account. At 5%, the same streak takes 40% and requires a 67% gain to recover.</p></div>
+        <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+          <button class="btn btn-sm btn-ghost" data-toggle-post>Read article</button>
+          <button class="pill" data-bookmark="post-3">☆ Save</button>
+        </div>
+      </article>
+      <article class="card reveal" data-c="fundamentals" data-delay="0">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag green">fundamentals</span><span class="tag">6 min read</span></div>
+        <h3 style="font-size:1.15rem">Trading the news without trading the spike</h3>
+        <p class="excerpt">The first thirty seconds after a release belong to algorithms with better latency than you. The tradeable opportunity is usually the second move: afte…</p>
+        <div class="full" style="display:none"><p style="color:var(--muted);font-size:.93rem">The first thirty seconds after a release belong to algorithms with better latency than you. The tradeable opportunity is usually the second move: after the initial spike, price often retraces into the pre-release range and then resolves in the direction of the surprise. Waiting for the first fifteen-minute candle to close gives you a defined range, a defined stop, and no slippage.</p></div>
+        <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+          <button class="btn btn-sm btn-ghost" data-toggle-post>Read article</button>
+          <button class="pill" data-bookmark="post-4">☆ Save</button>
+        </div>
+      </article>
+      <article class="card reveal" data-c="process" data-delay="1">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag green">process</span><span class="tag">5 min read</span></div>
+        <h3 style="font-size:1.15rem">Backtesting properly with a bar replay</h3>
+        <p class="excerpt">Scrolling back through a chart teaches you almost nothing because you can see what happened next. Bar replay forces the same uncertainty you face live…</p>
+        <div class="full" style="display:none"><p style="color:var(--muted);font-size:.93rem">Scrolling back through a chart teaches you almost nothing because you can see what happened next. Bar replay forces the same uncertainty you face live. Do a hundred trades in replay with a written setup, log every one, and only then decide whether the strategy is worth demo time. It's the cheapest hundred trades you'll ever take.</p></div>
+        <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+          <button class="btn btn-sm btn-ghost" data-toggle-post>Read article</button>
+          <button class="pill" data-bookmark="post-5">☆ Save</button>
+        </div>
+      </article>
+      <article class="card reveal" data-c="risk" data-delay="0">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag green">risk</span><span class="tag">5 min read</span></div>
+        <h3 style="font-size:1.15rem">Correlation: the risk hiding in your open positions</h3>
+        <p class="excerpt">Three longs on EUR/USD, GBP/USD and AUD/USD is one short-dollar position in three costumes. If the dollar rallies, all three lose together. Before add…</p>
+        <div class="full" style="display:none"><p style="color:var(--muted);font-size:.93rem">Three longs on EUR/USD, GBP/USD and AUD/USD is one short-dollar position in three costumes. If the dollar rallies, all three lose together. Before adding a position, ask what the common factor is across everything you hold. Cap total exposure to any single currency, not just per-trade risk.</p></div>
+        <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+          <button class="btn btn-sm btn-ghost" data-toggle-post>Read article</button>
+          <button class="pill" data-bookmark="post-6">☆ Save</button>
+        </div>
+      </article>
+      <article class="card reveal" data-c="process" data-delay="1">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag green">process</span><span class="tag">4 min read</span></div>
+        <h3 style="font-size:1.15rem">Choosing one setup and sticking to it for a month</h3>
+        <p class="excerpt">Strategy-hopping is the most expensive habit in retail trading, because no approach gets a sample size large enough to evaluate. Pick one setup, one o…</p>
+        <div class="full" style="display:none"><p style="color:var(--muted);font-size:.93rem">Strategy-hopping is the most expensive habit in retail trading, because no approach gets a sample size large enough to evaluate. Pick one setup, one or two pairs and one session. Take every valid signal for thirty days. At the end you'll have data instead of opinions — and data is the only thing that can tell you to change.</p></div>
+        <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+          <button class="btn btn-sm btn-ghost" data-toggle-post>Read article</button>
+          <button class="pill" data-bookmark="post-7">☆ Save</button>
+        </div>
+      </article>
+    </div>
+    <p class="muted center" id="bl-empty" style="display:none;margin-top:26px">No articles match that search.</p>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="dot">P</span> PiplineAcademy</a>
+        <p class="muted" style="font-size:.9rem;max-width:36ch">Free, structured forex education — from your first pip to a written trading plan you can actually follow.</p>
+        <form data-newsletter style="display:flex;gap:8px;max-width:320px">
+          <input type="email" placeholder="Email for weekly lessons" aria-label="Email" />
+          <button class="btn btn-primary btn-sm" type="submit">Join</button>
+        </form>
+      </div>
+      <div><h4>Learn</h4><a href="learn-forex.html">Learn Forex</a><a href="candlestick-patterns.html">Candlestick Patterns</a><a href="technical-analysis.html">Technical Analysis</a><a href="risk-management.html">Risk Management</a></div>
+      <div><h4>Tools</h4><a href="economic-calendar.html">Economic Calendar</a><a href="glossary.html">Trading Glossary</a><a href="quiz.html">Quiz</a><a href="trading-psychology.html">Trading Psychology</a></div>
+      <div><h4>Company</h4><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year></span> Pipline Forex Academy. Educational content only — not financial advice.</span>
+      <span>Trading involves substantial risk of loss.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="totop" title="Back to top">↑</button>
+<div id="toasts"></div>
+<script src="assets/app.js"></script>
+<script>
+document.addEventListener("pfa:ready",function(){
+  var cards=PFA.$$("#bl-grid .card"), q=document.getElementById("bl-q"), cat="all";
+  function apply(){
+    var s=q.value.trim().toLowerCase(),n=0;
+    cards.forEach(function(c){
+      var ok=(cat==="all"||c.dataset.c===cat)&&(!s||c.textContent.toLowerCase().includes(s));
+      c.style.display=ok?"":"none"; if(ok)n++;
+    });
+    document.getElementById("bl-empty").style.display=n?"none":"block";
+  }
+  q.addEventListener("input",apply);
+  PFA.$$("#bl-cats .pill").forEach(function(p){p.addEventListener("click",function(){
+    PFA.$$("#bl-cats .pill").forEach(function(x){x.classList.remove("active")});
+    p.classList.add("active");cat=p.dataset.c;apply();});});
+  PFA.$$("[data-toggle-post]").forEach(function(b){
+    b.addEventListener("click",function(){
+      var card=b.closest(".card"), full=card.querySelector(".full"), ex=card.querySelector(".excerpt");
+      var open=full.style.display!=="none";
+      full.style.display=open?"none":"block"; ex.style.display=open?"block":"none";
+      b.textContent=open?"Read article":"Close article";
+    });
+  });
+});
+</script>
+</body>
+</html>

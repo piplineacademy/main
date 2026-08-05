@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Economic Calendar | Pipline Forex Academy</title>
+<meta name="description" content="The releases that move currency pairs, ranked by impact, with forecast versus previous and guidance on how to trade around news." />
+<meta property="og:title" content="Economic Calendar | Pipline Forex Academy" />
+<meta property="og:description" content="The releases that move currency pairs, ranked by impact, with forecast versus previous and guidance on how to trade around news." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<div id="readbar"></div>
+
+<header class="site">
+  <div class="container">
+    <nav class="nav">
+      <a class="brand" href="index.html"><span class="dot">P</span> Pipline<span style="color:var(--brand)">Academy</span></a>
+      <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="learn-forex.html">Learn Forex</a>
+          <a href="candlestick-patterns.html">Candlestick Patterns</a>
+          <a href="technical-analysis.html">Technical Analysis</a>
+          <a href="risk-management.html">Risk Management</a>
+          <a href="trading-psychology.html">Trading Psychology</a>
+          <div class="nav-more">
+            <button type="button">More ▾</button>
+            <div class="dropdown">
+            <a href="economic-calendar.html">Economic Calendar</a>
+            <a href="glossary.html">Trading Glossary</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy Policy</a>
+            </div>
+          </div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <button class="icon-btn" data-theme-toggle type="button">☾</button>
+        <button class="icon-btn burger" id="burger" type="button" aria-label="Menu">☰</button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer">
+      <a href="index.html">Home</a>
+      <a href="learn-forex.html">Learn Forex</a>
+      <a href="candlestick-patterns.html">Candlestick Patterns</a>
+      <a href="technical-analysis.html">Technical Analysis</a>
+      <a href="risk-management.html">Risk Management</a>
+      <a href="trading-psychology.html">Trading Psychology</a>
+      <a href="economic-calendar.html">Economic Calendar</a>
+      <a href="glossary.html">Trading Glossary</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+</aside>
+
+<main>
+<section class="page-head">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Home</a> / Economic Calendar</div>
+    <h1>Economic Calendar</h1>
+    <p class="muted" style="max-width:66ch">A reference calendar of the recurring releases that matter. Filter by impact or currency, sort any column, and read the news-trading rules below.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="card" style="margin-bottom:20px">
+      <div class="grid g2" style="gap:16px;align-items:end">
+        <div class="field mb-0"><label>Search events</label><input id="ec-q" placeholder="e.g. CPI, payrolls, ECB" /></div>
+        <div><label>Impact</label><div class="pill-row" id="ec-imp">
+          <button class="pill active" data-i="all">All</button><button class="pill" data-i="high">High</button><button class="pill" data-i="medium">Medium</button><button class="pill" data-i="low">Low</button>
+        </div></div>
+      </div>
+      <div class="pill-row" id="ec-cur" style="margin-top:14px">
+        <button class="pill active" data-c="all">all</button><button class="pill" data-c="USD">USD</button><button class="pill" data-c="EUR">EUR</button><button class="pill" data-c="GBP">GBP</button><button class="pill" data-c="JPY">JPY</button><button class="pill" data-c="CAD">CAD</button><button class="pill" data-c="AUD">AUD</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table id="ec-table" data-sortable>
+        <thead><tr>
+          <th data-sort="str">Time (GMT)</th><th data-sort="str">Currency</th><th data-sort="str">Event</th>
+          <th data-sort="str">Impact</th><th data-sort="str">Forecast</th><th data-sort="str">Previous</th>
+        </tr></thead>
+        <tbody>
+          <tr data-cur="USD" data-imp="high">
+            <td>08:30</td><td><strong>USD</strong></td>
+            <td><strong>Non-Farm Payrolls</strong><div class="muted" style="font-size:.83rem">Monthly change in US employment excluding farming. The single biggest scheduled mover in forex.</div></td>
+            <td><span class="tag red">high</span></td><td>245K</td><td>232K</td></tr>
+          <tr data-cur="USD" data-imp="high">
+            <td>08:30</td><td><strong>USD</strong></td>
+            <td><strong>CPI (Inflation) y/y</strong><div class="muted" style="font-size:.83rem">Headline consumer price inflation. Drives rate-cut and rate-hike expectations directly.</div></td>
+            <td><span class="tag red">high</span></td><td>3.1%</td><td>3.2%</td></tr>
+          <tr data-cur="USD" data-imp="high">
+            <td>14:00</td><td><strong>USD</strong></td>
+            <td><strong>Fed Interest Rate Decision</strong><div class="muted" style="font-size:.83rem">The rate itself matters less than the statement and press conference tone.</div></td>
+            <td><span class="tag red">high</span></td><td>5.25%</td><td>5.25%</td></tr>
+          <tr data-cur="GBP" data-imp="high">
+            <td>07:00</td><td><strong>GBP</strong></td>
+            <td><strong>BoE Rate Decision</strong><div class="muted" style="font-size:.83rem">Watch the vote split — a shifting split moves sterling more than the decision.</div></td>
+            <td><span class="tag red">high</span></td><td>5.00%</td><td>5.00%</td></tr>
+          <tr data-cur="EUR" data-imp="high">
+            <td>07:45</td><td><strong>EUR</strong></td>
+            <td><strong>ECB Rate Decision</strong><div class="muted" style="font-size:.83rem">Followed by a press conference 45 minutes later, which usually causes the bigger move.</div></td>
+            <td><span class="tag red">high</span></td><td>4.25%</td><td>4.25%</td></tr>
+          <tr data-cur="JPY" data-imp="high">
+            <td>23:50</td><td><strong>JPY</strong></td>
+            <td><strong>BoJ Policy Statement</strong><div class="muted" style="font-size:.83rem">Timing is unscheduled within a window, which makes yen pairs jumpy all session.</div></td>
+            <td><span class="tag red">high</span></td><td>-0.10%</td><td>-0.10%</td></tr>
+          <tr data-cur="USD" data-imp="medium">
+            <td>08:30</td><td><strong>USD</strong></td>
+            <td><strong>Retail Sales m/m</strong><div class="muted" style="font-size:.83rem">Consumer demand proxy; a decent second-tier volatility event.</div></td>
+            <td><span class="tag amber">medium</span></td><td>0.4%</td><td>0.3%</td></tr>
+          <tr data-cur="USD" data-imp="medium">
+            <td>09:45</td><td><strong>USD</strong></td>
+            <td><strong>Flash Manufacturing PMI</strong><div class="muted" style="font-size:.83rem">Survey of purchasing managers. Above 50 means expansion.</div></td>
+            <td><span class="tag amber">medium</span></td><td>51.2</td><td>50.8</td></tr>
+          <tr data-cur="EUR" data-imp="medium">
+            <td>05:00</td><td><strong>EUR</strong></td>
+            <td><strong>German ZEW Sentiment</strong><div class="muted" style="font-size:.83rem">Institutional sentiment on the largest euro-area economy.</div></td>
+            <td><span class="tag amber">medium</span></td><td>18.4</td><td>16.1</td></tr>
+          <tr data-cur="CAD" data-imp="medium">
+            <td>08:30</td><td><strong>CAD</strong></td>
+            <td><strong>Employment Change</strong><div class="muted" style="font-size:.83rem">Loonie mover, often released the same morning as US NFP.</div></td>
+            <td><span class="tag amber">medium</span></td><td>22K</td><td>18K</td></tr>
+          <tr data-cur="AUD" data-imp="low">
+            <td>01:30</td><td><strong>AUD</strong></td>
+            <td><strong>RBA Minutes</strong><div class="muted" style="font-size:.83rem">Detail behind an already-known decision; usually a modest reaction.</div></td>
+            <td><span class="tag ">low</span></td><td>—</td><td>—</td></tr>
+          <tr data-cur="USD" data-imp="low">
+            <td>10:30</td><td><strong>USD</strong></td>
+            <td><strong>Crude Oil Inventories</strong><div class="muted" style="font-size:.83rem">Matters most for CAD via oil correlation.</div></td>
+            <td><span class="tag ">low</span></td><td>-1.2M</td><td>0.6M</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="font-size:.86rem;margin-top:10px"><span id="ec-count">12</span> events shown. Times are indicative — always confirm against your broker's live feed.</p>
+
+    <div class="grid g2" style="margin-top:36px;gap:26px">
+      <div class="card reveal"><h3 class="mt-0">How to trade around news</h3>
+        <ul class="muted" style="padding-left:18px;font-size:.93rem">
+          <li>Spreads widen and slippage spikes in the seconds around a high-impact release. Your stop may fill far past its price.</li>
+          <li>The market prices the <em>forecast</em> in advance. The move comes from the surprise, and often reverses within minutes.</li>
+          <li>Beginners should be flat before high-impact events, not positioned for them.</li>
+          <li>A workable approach is waiting for the first fifteen-minute candle to close and trading the retest of its range.</li>
+          <li>Central bank press conferences move price more than the decision they follow.</li>
+        </ul>
+      </div>
+      <div class="card reveal"><h3 class="mt-0">Reading impact ratings</h3>
+        <p class="muted" style="font-size:.93rem">High-impact events routinely move majors 60–120 pips within an hour. Medium-impact releases produce 20–50 pips and are usually tradeable with normal risk. Low-impact items rarely justify a change of plan but can amplify an existing move if they line up with the same story.</p>
+        <p class="muted" style="font-size:.93rem">The real signal is the gap between actual and forecast, weighted by how surprised the market is — a small miss on a closely-watched inflation print outweighs a large miss on a secondary survey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="dot">P</span> PiplineAcademy</a>
+        <p class="muted" style="font-size:.9rem;max-width:36ch">Free, structured forex education — from your first pip to a written trading plan you can actually follow.</p>
+        <form data-newsletter style="display:flex;gap:8px;max-width:320px">
+          <input type="email" placeholder="Email for weekly lessons" aria-label="Email" />
+          <button class="btn btn-primary btn-sm" type="submit">Join</button>
+        </form>
+      </div>
+      <div><h4>Learn</h4><a href="learn-forex.html">Learn Forex</a><a href="candlestick-patterns.html">Candlestick Patterns</a><a href="technical-analysis.html">Technical Analysis</a><a href="risk-management.html">Risk Management</a></div>
+      <div><h4>Tools</h4><a href="economic-calendar.html">Economic Calendar</a><a href="glossary.html">Trading Glossary</a><a href="quiz.html">Quiz</a><a href="trading-psychology.html">Trading Psychology</a></div>
+      <div><h4>Company</h4><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year></span> Pipline Forex Academy. Educational content only — not financial advice.</span>
+      <span>Trading involves substantial risk of loss.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="totop" title="Back to top">↑</button>
+<div id="toasts"></div>
+<script src="assets/app.js"></script>
+<script>
+document.addEventListener("pfa:ready",function(){
+  var rows=PFA.$$("#ec-table tbody tr"), q=document.getElementById("ec-q"), imp="all", cur="all";
+  function apply(){
+    var s=q.value.trim().toLowerCase(),n=0;
+    rows.forEach(function(r){
+      var ok=(imp==="all"||r.dataset.imp===imp)&&(cur==="all"||r.dataset.cur===cur)&&(!s||r.textContent.toLowerCase().includes(s));
+      r.style.display=ok?"":"none"; if(ok)n++;
+    });
+    document.getElementById("ec-count").textContent=n;
+  }
+  q.addEventListener("input",apply);
+  PFA.$$("#ec-imp .pill").forEach(function(p){p.addEventListener("click",function(){
+    PFA.$$("#ec-imp .pill").forEach(function(x){x.classList.remove("active")});p.classList.add("active");imp=p.dataset.i;apply();});});
+  PFA.$$("#ec-cur .pill").forEach(function(p){p.addEventListener("click",function(){
+    PFA.$$("#ec-cur .pill").forEach(function(x){x.classList.remove("active")});p.classList.add("active");cur=p.dataset.c;apply();});});
+});
+</script>
+</body>
+</html>

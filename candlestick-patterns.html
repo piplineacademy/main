@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Candlestick Patterns | Pipline Forex Academy</title>
+<meta name="description" content="Sixteen candlestick patterns explained with filters: single, double and triple-candle formations, what they signal and when to ignore them." />
+<meta property="og:title" content="Candlestick Patterns | Pipline Forex Academy" />
+<meta property="og:description" content="Sixteen candlestick patterns explained with filters: single, double and triple-candle formations, what they signal and when to ignore them." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<div id="readbar"></div>
+
+<header class="site">
+  <div class="container">
+    <nav class="nav">
+      <a class="brand" href="index.html"><span class="dot">P</span> Pipline<span style="color:var(--brand)">Academy</span></a>
+      <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="learn-forex.html">Learn Forex</a>
+          <a href="candlestick-patterns.html">Candlestick Patterns</a>
+          <a href="technical-analysis.html">Technical Analysis</a>
+          <a href="risk-management.html">Risk Management</a>
+          <a href="trading-psychology.html">Trading Psychology</a>
+          <div class="nav-more">
+            <button type="button">More ▾</button>
+            <div class="dropdown">
+            <a href="economic-calendar.html">Economic Calendar</a>
+            <a href="glossary.html">Trading Glossary</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy Policy</a>
+            </div>
+          </div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <button class="icon-btn" data-theme-toggle type="button">☾</button>
+        <button class="icon-btn burger" id="burger" type="button" aria-label="Menu">☰</button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer">
+      <a href="index.html">Home</a>
+      <a href="learn-forex.html">Learn Forex</a>
+      <a href="candlestick-patterns.html">Candlestick Patterns</a>
+      <a href="technical-analysis.html">Technical Analysis</a>
+      <a href="risk-management.html">Risk Management</a>
+      <a href="trading-psychology.html">Trading Psychology</a>
+      <a href="economic-calendar.html">Economic Calendar</a>
+      <a href="glossary.html">Trading Glossary</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+</aside>
+
+<main>
+<section class="page-head">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Home</a> / Candlestick Patterns</div>
+    <h1>Candlestick Patterns</h1>
+    <p class="muted" style="max-width:66ch">Filter by bias or by size, search by name, and click any pattern to see how it forms and when it is worth acting on.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="card" style="margin-bottom:24px">
+      <div class="grid g2" style="gap:16px;align-items:end">
+        <div class="field mb-0"><label>Search patterns</label><input id="cs-search" placeholder="e.g. engulfing, doji, star" /></div>
+        <div>
+          <label>Filter</label>
+          <div class="pill-row" id="cs-filters">
+            <button class="pill active" data-f="all">All</button><button class="pill" data-f="bullish">Bullish</button><button class="pill" data-f="bearish">Bearish</button><button class="pill" data-f="neutral">Neutral</button><button class="pill" data-f="reversal">Reversal</button><button class="pill" data-f="continuation">Continuation</button><button class="pill" data-f="trend">Trend</button><button class="pill" data-f="single">Single</button><button class="pill" data-f="double">Double</button><button class="pill" data-f="triple">Triple</button>
+          </div>
+        </div>
+      </div>
+      <p class="muted" style="margin:14px 0 0;font-size:.86rem"><span id="cs-count">16</span> patterns shown</p>
+    </div>
+    <div class="grid g3" id="cs-grid">
+      <article class="card reveal" data-bias="neutral" data-size="single" data-name="doji">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag amber">neutral</span><span class="tag">single-candle</span></div>
+        <h3>Doji</h3>
+        <p>Open and close are almost identical, leaving a tiny body with wicks on both sides. It signals genuine indecision. On its own it means little; after an extended run into a level, it is often the first hint that the move is running out of participants.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-doji">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="bullish" data-size="single" data-name="hammer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag green">bullish</span><span class="tag">single-candle</span></div>
+        <h3>Hammer</h3>
+        <p>A small body at the top of the range with a long lower wick at least twice the body. Sellers pushed price down and were fully rejected. Meaningful only at the bottom of a decline and at a level you had already marked.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-hammer">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="bearish" data-size="single" data-name="shooting star">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag red">bearish</span><span class="tag">single-candle</span></div>
+        <h3>Shooting Star</h3>
+        <p>The mirror of the hammer: small body at the bottom, long upper wick. Buyers were rejected at a high. Strongest when it forms into prior resistance after a sharp rally.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-shootingstar">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="trend" data-size="single" data-name="marubozu">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag amber">trend</span><span class="tag">single-candle</span></div>
+        <h3>Marubozu</h3>
+        <p>A full-bodied candle with little or no wick. One side controlled the entire session. A bullish marubozu breaking a range often marks genuine intent rather than a probe.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-marubozu">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="neutral" data-size="single" data-name="spinning top">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag amber">neutral</span><span class="tag">single-candle</span></div>
+        <h3>Spinning Top</h3>
+        <p>Small body, wicks of similar length on both sides. Momentum is fading. In a strong trend it is usually a pause, not a reversal.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-spinningtop">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="bullish" data-size="double" data-name="bullish engulfing">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag green">bullish</span><span class="tag">double-candle</span></div>
+        <h3>Bullish Engulfing</h3>
+        <p>A down candle followed by an up candle whose body completely covers it. Demand overwhelmed the previous session. The wider the second body relative to recent candles, the more it says.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-bullishengulfing">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="bearish" data-size="double" data-name="bearish engulfing">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag red">bearish</span><span class="tag">double-candle</span></div>
+        <h3>Bearish Engulfing</h3>
+        <p>An up candle swallowed whole by the next down candle. Common at the top of a rally into resistance, especially when volume or range expands.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-bearishengulfing">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="bullish" data-size="double" data-name="piercing line">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag green">bullish</span><span class="tag">double-candle</span></div>
+        <h3>Piercing Line</h3>
+        <p>A down candle, then an up candle that opens lower but closes above the midpoint of the first. A partial engulf — weaker than a full engulfing bar but valid at support.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-piercingline">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="bearish" data-size="double" data-name="dark cloud cover">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag red">bearish</span><span class="tag">double-candle</span></div>
+        <h3>Dark Cloud Cover</h3>
+        <p>The bearish counterpart: opens above the prior high and closes below the midpoint of the previous up candle.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-darkcloudcover">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="reversal" data-size="double" data-name="tweezer top / bottom">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag amber">reversal</span><span class="tag">double-candle</span></div>
+        <h3>Tweezer Top / Bottom</h3>
+        <p>Two or more candles rejecting almost the exact same price. It shows a level being defended twice, which makes it a good place to hang a stop just beyond.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-tweezertopbottom">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="bullish" data-size="triple" data-name="morning star">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag green">bullish</span><span class="tag">triple-candle</span></div>
+        <h3>Morning Star</h3>
+        <p>A long down candle, a small indecisive candle, then a strong up candle closing well into the first body. A classic three-bar bottom that reads like a handover from sellers to buyers.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-morningstar">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="bearish" data-size="triple" data-name="evening star">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag red">bearish</span><span class="tag">triple-candle</span></div>
+        <h3>Evening Star</h3>
+        <p>The topping version — a strong rally candle, a stall, then decisive selling that erases most of the first candle.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-eveningstar">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="bullish" data-size="triple" data-name="three white soldiers">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag green">bullish</span><span class="tag">triple-candle</span></div>
+        <h3>Three White Soldiers</h3>
+        <p>Three consecutive strong up candles with higher closes and small wicks. Signals sustained buying, though it often arrives late in a move.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-threewhitesoldiers">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="bearish" data-size="triple" data-name="three black crows">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag red">bearish</span><span class="tag">triple-candle</span></div>
+        <h3>Three Black Crows</h3>
+        <p>Three consecutive strong down candles. Same logic inverted, and same caveat about arriving late.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-threeblackcrows">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="continuation" data-size="double" data-name="inside bar">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag amber">continuation</span><span class="tag">double-candle</span></div>
+        <h3>Inside Bar</h3>
+        <p>A candle whose entire range sits inside the previous one. Volatility is compressing. Traders often use the break of the mother bar as a trigger in the direction of the trend.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-insidebar">☆ Save</button>
+      </article>
+      <article class="card reveal" data-bias="continuation" data-size="triple" data-name="rising / falling three">
+        <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="tag amber">continuation</span><span class="tag">triple-candle</span></div>
+        <h3>Rising / Falling Three</h3>
+        <p>A long trend candle, a few small counter-trend candles that stay inside its range, then another long candle in the original direction. A pause, not a turn.</p>
+        <button class="pill" style="margin-top:14px" data-bookmark="cs-risingfallingthree">☆ Save</button>
+      </article>
+    </div>
+    <div class="callout" style="margin-top:32px">
+      <p><strong>Context beats the pattern.</strong> A hammer in the middle of a range is noise. The same hammer at a weekly support level that has already held twice, in a session with real liquidity, is a trade. Always ask what the candle is rejecting before you ask what it is called.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="dot">P</span> PiplineAcademy</a>
+        <p class="muted" style="font-size:.9rem;max-width:36ch">Free, structured forex education — from your first pip to a written trading plan you can actually follow.</p>
+        <form data-newsletter style="display:flex;gap:8px;max-width:320px">
+          <input type="email" placeholder="Email for weekly lessons" aria-label="Email" />
+          <button class="btn btn-primary btn-sm" type="submit">Join</button>
+        </form>
+      </div>
+      <div><h4>Learn</h4><a href="learn-forex.html">Learn Forex</a><a href="candlestick-patterns.html">Candlestick Patterns</a><a href="technical-analysis.html">Technical Analysis</a><a href="risk-management.html">Risk Management</a></div>
+      <div><h4>Tools</h4><a href="economic-calendar.html">Economic Calendar</a><a href="glossary.html">Trading Glossary</a><a href="quiz.html">Quiz</a><a href="trading-psychology.html">Trading Psychology</a></div>
+      <div><h4>Company</h4><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year></span> Pipline Forex Academy. Educational content only — not financial advice.</span>
+      <span>Trading involves substantial risk of loss.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="totop" title="Back to top">↑</button>
+<div id="toasts"></div>
+<script src="assets/app.js"></script>
+<script>
+document.addEventListener("pfa:ready",function(){
+  var cards=PFA.$$("#cs-grid .card"), search=document.getElementById("cs-search"), count=document.getElementById("cs-count"), f="all";
+  function apply(){
+    var q=search.value.trim().toLowerCase(),n=0;
+    cards.forEach(function(c){
+      var okF = f==="all" || c.dataset.bias===f || c.dataset.size===f;
+      var okQ = !q || c.dataset.name.includes(q) || c.textContent.toLowerCase().includes(q);
+      var show = okF && okQ;
+      c.style.display=show?"":"none"; if(show)n++;
+    });
+    count.textContent=n;
+  }
+  search.addEventListener("input",apply);
+  PFA.$$("#cs-filters .pill").forEach(function(p){
+    p.addEventListener("click",function(){
+      PFA.$$("#cs-filters .pill").forEach(function(x){x.classList.remove("active")});
+      p.classList.add("active"); f=p.dataset.f; apply();
+    });
+  });
+});
+</script>
+</body>
+</html>

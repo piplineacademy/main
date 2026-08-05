@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Risk Management | Pipline Forex Academy</title>
+<meta name="description" content="Position sizing calculator, R-multiples, stop placement, drawdown maths and the rules that keep a trading account alive." />
+<meta property="og:title" content="Risk Management | Pipline Forex Academy" />
+<meta property="og:description" content="Position sizing calculator, R-multiples, stop placement, drawdown maths and the rules that keep a trading account alive." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<div id="readbar"></div>
+
+<header class="site">
+  <div class="container">
+    <nav class="nav">
+      <a class="brand" href="index.html"><span class="dot">P</span> Pipline<span style="color:var(--brand)">Academy</span></a>
+      <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="learn-forex.html">Learn Forex</a>
+          <a href="candlestick-patterns.html">Candlestick Patterns</a>
+          <a href="technical-analysis.html">Technical Analysis</a>
+          <a href="risk-management.html">Risk Management</a>
+          <a href="trading-psychology.html">Trading Psychology</a>
+          <div class="nav-more">
+            <button type="button">More ▾</button>
+            <div class="dropdown">
+            <a href="economic-calendar.html">Economic Calendar</a>
+            <a href="glossary.html">Trading Glossary</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy Policy</a>
+            </div>
+          </div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <button class="icon-btn" data-theme-toggle type="button">☾</button>
+        <button class="icon-btn burger" id="burger" type="button" aria-label="Menu">☰</button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer">
+      <a href="index.html">Home</a>
+      <a href="learn-forex.html">Learn Forex</a>
+      <a href="candlestick-patterns.html">Candlestick Patterns</a>
+      <a href="technical-analysis.html">Technical Analysis</a>
+      <a href="risk-management.html">Risk Management</a>
+      <a href="trading-psychology.html">Trading Psychology</a>
+      <a href="economic-calendar.html">Economic Calendar</a>
+      <a href="glossary.html">Trading Glossary</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+</aside>
+
+<main>
+<section class="page-head">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Home</a> / Risk Management</div>
+    <h1>Risk Management</h1>
+    <p class="muted" style="max-width:66ch">The part of trading that is pure arithmetic — and the part that decides whether you're still here next year.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="grid g2" style="gap:26px;align-items:start">
+      <div class="card reveal">
+        <h3 class="mt-0">Position size calculator</h3>
+        <p class="muted" style="font-size:.9rem">Work out the exact lot size for the risk you've decided to take.</p>
+        <div class="grid g2" style="gap:12px;margin-top:14px">
+          <div class="field mb-0"><label>Account balance ($)</label><input id="bal" type="number" value="10000" /></div>
+          <div class="field mb-0"><label>Risk per trade (%)</label><input id="risk" type="number" value="1" step="0.1" /></div>
+          <div class="field mb-0"><label>Stop loss (pips)</label><input id="stop" type="number" value="30" /></div>
+          <div class="field mb-0"><label>Pip value per lot ($)</label><input id="pv" type="number" value="10" /></div>
+        </div>
+        <div style="margin-top:16px;padding:18px;border-radius:14px;background:var(--surface-2)">
+          <div style="display:flex;justify-content:space-between"><span class="muted">Amount at risk</span><strong id="amt">$100.00</strong></div>
+          <div style="display:flex;justify-content:space-between;margin-top:8px"><span class="muted">Position size</span><strong id="lots" style="color:var(--brand);font-size:1.2rem">0.33 lots</strong></div>
+          <div style="display:flex;justify-content:space-between;margin-top:8px"><span class="muted">Units</span><strong id="units">33,000</strong></div>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3 class="mt-0">Risk-to-reward &amp; expectancy</h3>
+        <p class="muted" style="font-size:.9rem">See what win rate a given R:R actually needs to break even.</p>
+        <div class="grid g2" style="gap:12px;margin-top:14px">
+          <div class="field mb-0"><label>Reward (R)</label><input id="rr" type="number" value="2" step="0.1" /></div>
+          <div class="field mb-0"><label>Your win rate (%)</label><input id="wr" type="number" value="45" /></div>
+        </div>
+        <div style="margin-top:16px;padding:18px;border-radius:14px;background:var(--surface-2)">
+          <div style="display:flex;justify-content:space-between"><span class="muted">Break-even win rate</span><strong id="be">33.3%</strong></div>
+          <div style="display:flex;justify-content:space-between;margin-top:8px"><span class="muted">Expectancy per trade</span><strong id="exp" style="color:var(--brand)">+0.35R</strong></div>
+          <div class="bar" style="margin-top:14px"><i id="expbar"></i></div>
+          <p class="muted" id="expnote" style="font-size:.84rem;margin:12px 0 0"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card reveal" style="margin-top:26px">
+      <h3 class="mt-0">Drawdown recovery — why losses aren't symmetrical</h3>
+      <p class="muted" style="font-size:.92rem">Losing 50% requires a 100% gain to get back. Drag the slider.</p>
+      <input id="dd" type="range" min="1" max="90" value="20" style="padding:0;margin-top:10px" />
+      <div style="display:flex;justify-content:space-between;margin-top:14px;flex-wrap:wrap;gap:10px">
+        <span class="muted">Drawdown: <strong id="ddv" style="color:var(--danger)">20%</strong></span>
+        <span class="muted">Gain needed to recover: <strong id="ddr" style="color:var(--brand)">25.0%</strong></span>
+      </div>
+    </div>
+
+    <div class="prose reveal" style="max-width:none;margin-top:36px">
+      <div class="grid g2" style="gap:28px">
+        <div>
+          <h2 style="margin-top:0">Rules worth stealing</h2>
+          <ul>
+            <li><strong>Risk a fixed fraction.</strong> One percent or less per trade, calculated from the current balance, every single time.</li>
+            <li><strong>Cap the day.</strong> Two consecutive losses or 3% down — the platform closes. No exceptions, no "one more".</li>
+            <li><strong>Stop first, size second.</strong> Place the stop where the idea is invalid, then let the calculator decide the lot size. Never the reverse.</li>
+            <li><strong>Never average a loser.</strong> Adding to a losing position converts a planned loss into an unplanned one.</li>
+            <li><strong>Count in R, not dollars.</strong> Dollars trigger emotion; R keeps every trade the same size in your head.</li>
+            <li><strong>Correlation is hidden size.</strong> Long EUR/USD and long GBP/USD at 1% each is closer to one 2% trade than two independent ones.</li>
+          </ul>
+        </div>
+        <div>
+          <h2 style="margin-top:0">Where stops belong</h2>
+          <p>A stop marks the price at which your reason for being in the trade no longer exists — beyond the swing that formed the setup, beyond the level you're trading from, and outside normal noise for that pair. A common approach is to use a multiple of ATR so the distance adapts to current volatility.</p>
+          <p>Stops that sit exactly on a round number or a visible swing get hunted. Place yours a little beyond the obvious, then reduce lot size to keep the money risk identical.</p>
+          <div class="callout"><p>If widening a stop forces a lot size you're uncomfortable with, the trade is too big for your account — not the stop too wide.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="dot">P</span> PiplineAcademy</a>
+        <p class="muted" style="font-size:.9rem;max-width:36ch">Free, structured forex education — from your first pip to a written trading plan you can actually follow.</p>
+        <form data-newsletter style="display:flex;gap:8px;max-width:320px">
+          <input type="email" placeholder="Email for weekly lessons" aria-label="Email" />
+          <button class="btn btn-primary btn-sm" type="submit">Join</button>
+        </form>
+      </div>
+      <div><h4>Learn</h4><a href="learn-forex.html">Learn Forex</a><a href="candlestick-patterns.html">Candlestick Patterns</a><a href="technical-analysis.html">Technical Analysis</a><a href="risk-management.html">Risk Management</a></div>
+      <div><h4>Tools</h4><a href="economic-calendar.html">Economic Calendar</a><a href="glossary.html">Trading Glossary</a><a href="quiz.html">Quiz</a><a href="trading-psychology.html">Trading Psychology</a></div>
+      <div><h4>Company</h4><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year></span> Pipline Forex Academy. Educational content only — not financial advice.</span>
+      <span>Trading involves substantial risk of loss.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="totop" title="Back to top">↑</button>
+<div id="toasts"></div>
+<script src="assets/app.js"></script>
+<script>
+document.addEventListener("pfa:ready",function(){
+  var g=function(i){return document.getElementById(i)};
+  function calc(){
+    var bal=+g("bal").value||0,risk=+g("risk").value||0,stop=+g("stop").value||0,pv=+g("pv").value||0;
+    var amt=bal*risk/100, lots=(stop>0&&pv>0)?amt/(stop*pv):0;
+    g("amt").textContent="$"+amt.toFixed(2);
+    g("lots").textContent=lots.toFixed(2)+" lots";
+    g("units").textContent=Math.round(lots*100000).toLocaleString();
+  }
+  ["bal","risk","stop","pv"].forEach(function(i){g(i).addEventListener("input",calc)});calc();
+
+  function ex(){
+    var rr=+g("rr").value||0, wr=(+g("wr").value||0)/100;
+    var be=rr>0?100/(1+rr):0;
+    var e=wr*rr-(1-wr);
+    g("be").textContent=be.toFixed(1)+"%";
+    g("exp").textContent=(e>=0?"+":"")+e.toFixed(2)+"R";
+    g("exp").style.color=e>=0?"var(--brand)":"var(--danger)";
+    g("expbar").style.width=Math.max(0,Math.min(100,(e+1)/3*100))+"%";
+    g("expnote").textContent=e>0
+      ? "Positive expectancy: with these numbers you make about "+e.toFixed(2)+"R per trade on average over a large sample."
+      : "Negative expectancy: at "+rr+"R you need a win rate above "+be.toFixed(1)+"% just to break even.";
+  }
+  ["rr","wr"].forEach(function(i){g(i).addEventListener("input",ex)});ex();
+
+  function dd(){
+    var d=+g("dd").value; g("ddv").textContent=d+"%";
+    g("ddr").textContent=(d/(100-d)*100).toFixed(1)+"%";
+  }
+  g("dd").addEventListener("input",dd);dd();
+});
+</script>
+</body>
+</html>

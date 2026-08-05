@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quiz | Pipline Forex Academy</title>
+<meta name="description" content="A twelve-question forex knowledge quiz with instant scoring, explanations for every answer and a saved best score." />
+<meta property="og:title" content="Quiz | Pipline Forex Academy" />
+<meta property="og:description" content="A twelve-question forex knowledge quiz with instant scoring, explanations for every answer and a saved best score." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+<div id="readbar"></div>
+
+<header class="site">
+  <div class="container">
+    <nav class="nav">
+      <a class="brand" href="index.html"><span class="dot">P</span> Pipline<span style="color:var(--brand)">Academy</span></a>
+      <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="learn-forex.html">Learn Forex</a>
+          <a href="candlestick-patterns.html">Candlestick Patterns</a>
+          <a href="technical-analysis.html">Technical Analysis</a>
+          <a href="risk-management.html">Risk Management</a>
+          <a href="trading-psychology.html">Trading Psychology</a>
+          <div class="nav-more">
+            <button type="button">More ▾</button>
+            <div class="dropdown">
+            <a href="economic-calendar.html">Economic Calendar</a>
+            <a href="glossary.html">Trading Glossary</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy Policy</a>
+            </div>
+          </div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+        <button class="icon-btn" data-theme-toggle type="button">☾</button>
+        <button class="icon-btn burger" id="burger" type="button" aria-label="Menu">☰</button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer">
+      <a href="index.html">Home</a>
+      <a href="learn-forex.html">Learn Forex</a>
+      <a href="candlestick-patterns.html">Candlestick Patterns</a>
+      <a href="technical-analysis.html">Technical Analysis</a>
+      <a href="risk-management.html">Risk Management</a>
+      <a href="trading-psychology.html">Trading Psychology</a>
+      <a href="economic-calendar.html">Economic Calendar</a>
+      <a href="glossary.html">Trading Glossary</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+</aside>
+
+<main>
+<section class="page-head">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Home</a> / Quiz</div>
+    <h1>Knowledge Quiz</h1>
+    <p class="muted" style="max-width:66ch">Twelve questions across the whole curriculum. One attempt per question, explanations shown as you go.</p>
+  </div>
+</section>
+<section class="section">
+  <div class="container" style="max-width:800px">
+    <div class="card" id="quiz-start">
+      <h2 class="mt-0">Ready?</h2>
+      <p class="muted">No timer, no sign-up. Your best score is stored in this browser so you can track improvement.</p>
+      <p class="muted">Best score so far: <strong id="best" style="color:var(--brand)">—</strong></p>
+      <button class="btn btn-primary" id="startBtn">Start quiz →</button>
+    </div>
+
+    <div id="quiz-main" style="display:none">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <span class="muted" id="qprog">Question 1 of 12</span>
+        <span class="muted">Score: <strong id="qscore" style="color:var(--brand)">0</strong></span>
+      </div>
+      <div class="bar" style="margin-bottom:22px"><i id="qbar"></i></div>
+      <div class="card">
+        <h3 id="qtext" style="margin-top:0;font-size:1.2rem"></h3>
+        <div id="qopts" style="display:grid;gap:10px;margin-top:18px"></div>
+        <div id="qexp" style="display:none;margin-top:18px;padding:14px 16px;border-radius:12px;background:var(--surface-2);font-size:.92rem"></div>
+        <button class="btn btn-primary" id="nextBtn" style="display:none;margin-top:18px">Next →</button>
+      </div>
+    </div>
+
+    <div id="quiz-end" class="card center" style="display:none">
+      <h2 class="mt-0" id="endTitle">Done</h2>
+      <p style="font-size:3rem;font-family:var(--font);color:var(--brand);margin:.1em 0" id="endScore">0/12</p>
+      <p class="muted" id="endMsg"></p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px">
+        <button class="btn btn-primary" id="retryBtn">Try again</button>
+        <a class="btn btn-ghost" href="learn-forex.html">Back to lessons</a>
+      </div>
+      <div id="review" style="text-align:left;margin-top:28px"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html"><span class="dot">P</span> PiplineAcademy</a>
+        <p class="muted" style="font-size:.9rem;max-width:36ch">Free, structured forex education — from your first pip to a written trading plan you can actually follow.</p>
+        <form data-newsletter style="display:flex;gap:8px;max-width:320px">
+          <input type="email" placeholder="Email for weekly lessons" aria-label="Email" />
+          <button class="btn btn-primary btn-sm" type="submit">Join</button>
+        </form>
+      </div>
+      <div><h4>Learn</h4><a href="learn-forex.html">Learn Forex</a><a href="candlestick-patterns.html">Candlestick Patterns</a><a href="technical-analysis.html">Technical Analysis</a><a href="risk-management.html">Risk Management</a></div>
+      <div><h4>Tools</h4><a href="economic-calendar.html">Economic Calendar</a><a href="glossary.html">Trading Glossary</a><a href="quiz.html">Quiz</a><a href="trading-psychology.html">Trading Psychology</a></div>
+      <div><h4>Company</h4><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span data-year></span> Pipline Forex Academy. Educational content only — not financial advice.</span>
+      <span>Trading involves substantial risk of loss.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="totop" title="Back to top">↑</button>
+<div id="toasts"></div>
+<script src="assets/app.js"></script>
+<script>
+document.addEventListener("pfa:ready",function(){
+  var Q=[["In EUR/USD, which currency is the base?",["EUR","USD","Both","Whichever is stronger"],0,"The base currency is always the first one listed. Buying EUR/USD means buying euros and selling dollars."],["A pip on most non-yen pairs is which decimal place?",["Second","Third","Fourth","Fifth"],2,"The fourth decimal place. The fifth is a pipette, a tenth of a pip. Yen pairs use the second decimal."],["How many units is one standard lot?",["1,000","10,000","100,000","1,000,000"],2,"A standard lot is 100,000 units, giving about $10 per pip on dollar-quoted pairs."],["What primarily determines your risk on a trade?",["Leverage","Position size and stop distance","The broker","Time of day"],1,"Leverage only affects margin required. Risk equals position size multiplied by stop distance."],["A hammer candle is most meaningful when it appears…",["Mid-range","At the top of a rally","After a decline, at support","On any timeframe"],2,"Context is everything. A hammer at a tested support level after a decline signals rejection of lower prices."],["What confirms an uptrend structurally?",["Price above the 200 MA","RSI over 70","Higher highs and higher lows","Green candles"],2,"Structure is defined by swing points. Indicators describe it; they don't define it."],["With a 2:1 reward-to-risk ratio, what win rate breaks even?",["25%","33.3%","50%","66%"],1,"Break-even win rate = 1 / (1 + R). For R = 2 that's 33.3%."],["A 25% drawdown requires what gain to recover?",["25%","30%","33.3%","50%"],2,"Loss / (100 - loss). 25 / 75 = 33.3%."],["Which is a high-impact scheduled release for USD?",["Crude oil inventories","Non-Farm Payrolls","RBA minutes","German ZEW"],1,"NFP is consistently the largest scheduled mover in forex."],["What is swap in forex?",["A broker fee per trade","Overnight interest on a position","The bid-ask gap","A type of order"],1,"Swap is the financing charge or credit for holding a position past rollover, based on rate differentials."],["Revenge trading is best prevented by…",["Increasing size to recover faster","A mandatory cooling-off rule after a loss","Switching pairs","Removing your stop"],1,"A hard-coded break removes the decision from you at the exact moment your judgement is worst."],["Long EUR/USD and long GBP/USD at 1% each is closest to…",["Two independent 1% risks","A 0.5% risk","Roughly a single 2% risk","No risk, they hedge"],2,"Both are effectively short the dollar. Correlated positions stack into one larger risk."]];
+  var i=0,score=0,answers=[];
+  var g=function(x){return document.getElementById(x)};
+  g("best").textContent=PFA.store.get("quizBest",null)!==null?PFA.store.get("quizBest")+"/"+Q.length:"—";
+
+  function render(){
+    var q=Q[i];
+    g("qprog").textContent="Question "+(i+1)+" of "+Q.length;
+    g("qbar").style.width=(i/Q.length*100)+"%";
+    g("qtext").textContent=q[0];
+    g("qexp").style.display="none"; g("nextBtn").style.display="none";
+    var box=g("qopts"); box.innerHTML="";
+    q[1].forEach(function(opt,idx){
+      var b=document.createElement("button");
+      b.className="btn btn-ghost"; b.style.justifyContent="flex-start"; b.style.textAlign="left"; b.style.width="100%";
+      b.textContent=String.fromCharCode(65+idx)+".  "+opt;
+      b.addEventListener("click",function(){pick(idx,b)});
+      box.appendChild(b);
+    });
+  }
+  function pick(idx,btn){
+    var q=Q[i], correct=idx===q[2];
+    answers.push({q:q[0],chosen:q[1][idx],right:q[1][q[2]],ok:correct});
+    PFA.$$("#qopts button").forEach(function(b,k){
+      b.disabled=true;
+      if(k===q[2]){b.style.borderColor="var(--brand)";b.style.color="var(--brand)"}
+    });
+    if(!correct){btn.style.borderColor="var(--danger)";btn.style.color="var(--danger)"}
+    else{score++;g("qscore").textContent=score;PFA.toast("Correct")}
+    var e=g("qexp"); e.style.display="block";
+    e.innerHTML="<strong style='color:"+(correct?"var(--brand)":"var(--danger)")+"'>"+(correct?"Correct. ":"Not quite. ")+"</strong>"+q[3];
+    g("nextBtn").style.display="inline-flex";
+    g("nextBtn").textContent=i===Q.length-1?"See results →":"Next →";
+  }
+  g("nextBtn").addEventListener("click",function(){
+    i++; if(i<Q.length){render()} else {finish()}
+  });
+  function finish(){
+    g("quiz-main").style.display="none"; g("quiz-end").style.display="block";
+    g("endScore").textContent=score+"/"+Q.length;
+    var pct=score/Q.length*100;
+    g("endMsg").textContent=pct>=85?"Excellent — you've got the fundamentals down. Move on to backtesting.":pct>=60?"Solid base. Revisit the modules behind the questions you missed.":"Worth another pass through Learn Forex and Risk Management before trading live.";
+    var best=PFA.store.get("quizBest",-1);
+    if(score>best){PFA.store.set("quizBest",score);PFA.toast("New personal best!")}
+    g("review").innerHTML=answers.map(function(a,k){
+      return "<div class='card' style='margin-bottom:10px;padding:14px'><div class='tag "+(a.ok?"green":"red")+"'>"+(a.ok?"correct":"missed")+"</div><p style='color:var(--text);margin:8px 0 4px;font-weight:600'>"+(k+1)+". "+a.q+"</p><p style='font-size:.88rem'>You chose: "+a.chosen+(a.ok?"":" &nbsp;·&nbsp; Answer: <strong style='color:var(--brand)'>"+a.right+"</strong>")+"</p></div>";
+    }).join("");
+  }
+  g("startBtn").addEventListener("click",function(){
+    g("quiz-start").style.display="none"; g("quiz-main").style.display="block"; render();
+  });
+  g("retryBtn").addEventListener("click",function(){
+    i=0;score=0;answers=[];g("qscore").textContent="0";
+    g("quiz-end").style.display="none";g("quiz-main").style.display="block";render();
+  });
+});
+</script>
+</body>
+</html>
